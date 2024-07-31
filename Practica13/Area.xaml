@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Practica13.Area"
+             xmlns:ViewModel="clr-namespace:Practica13.Modelos"
+             Title="Area">
+
+    <ContentPage.BindingContext>
+        <ViewModel:Area/>
+    </ContentPage.BindingContext>
+
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label 
+          Text="Area de un triangulo"
+          VerticalOptions="Center" 
+          HorizontalOptions="Center"
+          Margin="30"
+          FontSize="30"/>
+
+
+            <Entry Placeholder="Dijite lado 1"
+                 PlaceholderColor="White"
+                 Margin="15"
+                 Text="{Binding Numero1}"
+                 Keyboard="Numeric"
+                 />
+
+            <Entry Placeholder="Dijite lado 2"
+                 PlaceholderColor="White"
+                 Margin="15"
+                 Text="{Binding Numero2}"
+                 Keyboard="Numeric"/>
+
+            <Entry Placeholder="Dijite lado 3"
+                 PlaceholderColor="White"
+                 Margin="15"
+                 Text="{Binding Numero3}"
+                 Keyboard="Numeric"/>
+
+            <Entry Placeholder="Resultado"
+                 PlaceholderColor="White"
+                 Margin="15"
+                 Text="{Binding Resultado}"
+                 IsEnabled="False"/>
+
+            <Button Text="Calcular"
+                  BackgroundColor="Green"
+                  TextColor="Black"
+                  Margin="15"
+                  Command="{Binding CalcularAreaCommand}"/>
+
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

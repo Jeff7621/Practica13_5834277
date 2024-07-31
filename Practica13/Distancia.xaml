@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Practica13.Distancia"
+             xmlns:ViewModel="clr-namespace:Practica13.Modelos"
+             Title="Distancia">
+
+
+    <ContentPage.BindingContext>
+        <ViewModel:Distancia/>
+    </ContentPage.BindingContext>
+
+    <ScrollView>
+
+        <VerticalStackLayout>
+            <Label 
+        Text="Distancia entre dos puntos"
+        VerticalOptions="Center" 
+        HorizontalOptions="Center"
+        Margin="15"
+        FontSize="30"/>
+
+
+
+            <Label Text="P1X" VerticalOptions="Center" 
+                  HorizontalOptions="Center" FontSize="20"/>
+
+            <Entry Placeholder="dijite distancia P1x"
+                  PlaceholderColor="White"
+                  Margin="15"
+                  Text="{Binding P1x}"
+                  
+                  />
+
+            <Label Text="P1Y" VerticalOptions="Center" 
+                  HorizontalOptions="Center" FontSize="20"/>
+
+            <Entry Placeholder="dijite distancia P1y"
+                  PlaceholderColor="White"
+                  Margin="15"
+                  Text="{Binding P1y}"/>
+
+            <Label Text="P2X" VerticalOptions="Center" 
+                  HorizontalOptions="Center" FontSize="20"/>
+
+            <Entry Placeholder="dijite distancia P2x"
+                  PlaceholderColor="White"
+                  Margin="15"
+                  Text="{Binding P2x}"/>
+
+            <Label Text="P2Y" VerticalOptions="Center" 
+                  HorizontalOptions="Center" FontSize="20"/>
+
+            <Entry Placeholder="dijite distancia P2y"
+                  PlaceholderColor="White"
+                  Margin="15"
+                  Text="{Binding P2y}"/>
+
+            <Entry Placeholder="Resultado"
+                  PlaceholderColor="White"
+                  Margin="15"
+                  Text="{Binding Resultado}"
+                  IsEnabled="False"
+                  TextColor="White"/>
+
+
+            <Button Text="Calcular"
+                   Command="{Binding CalcularDistanciaCommand}"
+                   Margin="15"
+                   BackgroundColor="Red"
+                   TextColor="Black"/>
+
+
+        </VerticalStackLayout>
+
+    </ScrollView>
+
+
+
+</ContentPage>

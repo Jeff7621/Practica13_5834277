@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Practica13.BrochaGorda"
+              xmlns:ViewModel="clr-namespace:Practica13.Modelos"
+             Title="BrochaGorda">
+
+
+
+    <ContentPage.BindingContext>
+        <ViewModel:Brocha/>
+    </ContentPage.BindingContext>
+
+
+    <ScrollView>
+
+        <VerticalStackLayout>
+
+            <Label 
+            Text="Brocha Gorda"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" 
+            Margin="15"
+            FontSize="30"
+            />
+
+            <Entry Placeholder="Dijite los metros cuadrados"
+                   PlaceholderColor="White"
+                   Text="{Binding Metros}"
+                   Margin="15"
+                   Keyboard="Numeric"
+                   />
+
+            <Entry Placeholder="Dijite el precio de los metros cuadrados"
+                   Text="{Binding Precio}"
+                   PlaceholderColor="White"
+                   Margin="15"/>
+
+            <Entry Placeholder="Total"
+                   PlaceholderColor="White"
+                   Text="{Binding Total}"
+                   Margin="15"
+                   TextColor="White"
+                   IsEnabled="False"/>
+
+            <Button Text="Calcular"
+                    Command="{Binding ResultadoBrochaCommand}"
+                    Margin="15"
+                    BackgroundColor="Yellow"
+                    TextColor="Black"/>
+
+
+        </VerticalStackLayout>
+
+    </ScrollView>
+
+
+
+</ContentPage>
